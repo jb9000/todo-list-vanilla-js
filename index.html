@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jeff's To Do List 7</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Jeff's To Do List 7
+      </h1>
+    </header>
+
+  <div>
+    <input type="text" id="addTodoTextInput"> <button onclick="handlers.addTodo()">Add Todo</button>
+  </div> 
+
+  <div>
+    <input type="number" id ="changeTodoPositionInput"> <input type="text" id="changeTodoTextInput"> <button onclick="handlers.changeTodo()">Change Todo</button>
+  </div> 
+  
+  <div>
+    <input type="number" id ="toggleCompletedPositionInput"> <button onclick="handlers.toggleCompleted()">Toggle Completed</button> <button onclick="todoList.toggleAll()">Toggle All</button>
+  </div> 
+  
+  <ul></ul>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="/client.js"></script>
+
+  </body>
+</html>
