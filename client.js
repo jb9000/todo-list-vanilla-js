@@ -96,8 +96,16 @@ var view = {
   
     todoList.todos.forEach(function(todo, position) {
       var todoLi = document.createElement('li');
+      var todoTextWithCompletion = '';
+      
+     if (todo.completed === true) {
+      todoTextWithCompletion = "(x) " + todo.todoText + (" ");  
+        } else {
+      todoTextWithCompletion = "( ) " + todo.todoText + (" ");
+        }
+      
       todoLi.id = position;
-      todoLi.textContent = todo.todoText + " " + todo.completed;
+      todoLi.textContent = todoTextWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
     }, this);
